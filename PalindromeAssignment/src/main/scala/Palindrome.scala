@@ -19,6 +19,13 @@ object Palindrome {
   def main(args: Array[String]):Unit = {
     var string = scala.io.StdIn.readLine()
     string = string.toLowerCase()
-    println(checkPalindrome(string))
+
+    try{
+      println(checkPalindrome(string))
+    } catch {
+      case exception: Exception => {
+        println("Error: " + exception.getMessage)
+      }
+    }
   }
 }
